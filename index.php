@@ -10,13 +10,22 @@
 		<script src="js/jquery.colorbox-es.js"></script>
 	</head>
 	<script>
-		function paginaVer(tabla){
-			var urlAjax = "ver.php?tabla="+tabla;
+		function paginaVer(tabla) {
+			var urlAjax = "ver.php?tabla=" + tabla;
 			console.log(urlAjax);
-			$.colorbox({href:urlAjax, title:"Tabla de "+tabla});
-		}
+			$.colorbox({href: urlAjax, title: "Tabla de " + tabla});
+		};
 		$(document).ready(function(){
-		}); 
+			$('#modProfe').click(function(){
+				$('#wrapper').load('modificarProf.php');
+			});
+			$('#modAlumn').click(function(){
+				$('#wrapper').load('modificarEstud.php');
+			});
+			$('#modRamos').click(function(){
+				$('#wrapper').load('modificarRamo.php');
+			});
+		});
 	</script>
 	<body>
 		<div id="wrapper">
